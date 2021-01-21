@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nati Calculator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="input-boxes">
+            <div>
+                <input type="text" placeholder="00" maxlength="2" id="numero01" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+                <input type="text" placeholder="00" maxlength="2" id="numero06" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+                <input type="text" placeholder="00" maxlength="2" id="numero11" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+                <input type="text" placeholder="00" maxlength="2" id="numero16" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+            </div>
+            <div>
+                <input type="text" placeholder="00" maxlength="2" id="numero02" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+                <input type="text" placeholder="00" maxlength="2" id="numero07" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+                <input type="text" placeholder="00" maxlength="2" id="numero12" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+                <input type="text" placeholder="00" maxlength="2" id="numero17" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+            </div>
+            <div>
+                <input type="text" placeholder="00" maxlength="2" id="numero03" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+                <input type="text" placeholder="00" maxlength="2" id="numero08" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+                <input type="text" placeholder="00" maxlength="2" id="numero13" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+                <input type="text" placeholder="00" maxlength="2" id="numero18" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+            </div>
+            <div>
+                <input type="text" placeholder="00" maxlength="2" id="numero04" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+                <input type="text" placeholder="00" maxlength="2" id="numero09" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+                <input type="text" placeholder="00" maxlength="2" id="numero14"onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+                <input type="text" placeholder="00" maxlength="2" id="numero19" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+            </div>
+            <div>
+                <input type="text" placeholder="00" maxlength="2" id="numero05" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+                <input type="text" placeholder="00" maxlength="2" id="numero10" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+                <input type="text" placeholder="00" maxlength="2" id="numero15" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+                <input type="text" placeholder="00" maxlength="2" id="numero20" onkeypress='return event.charCode >= 48 && event.charCode <= 57'></input> 
+            </div>
+            <button type="button" class="boton" onclick="btnCalcular()">Calcular</button>
+        </div>
+        <div class="resultados">
+            <h1 id="resultadosPorDos" class="titles"></h1>
+            <div id="resultx2MinusOne" class="minusOne"></div>
+            <div id="resultx2" class="normal"></div>
+            <div id="resultx2PlusOne" class="plusOne"></div>
+        </div>
+        
+        <div class="resultados">
+            <h1 id="resultadosNormales" class="titles"></h1>
+            <div id="resultMinusOne" class="minusOne"></div>
+            <div id="result" class="normal"></div>
+            <div id="resultPlusOne" class="plusOne"></div>
+        </div>
+
+        <div class="titles">CUADRO</div>
+        <article>
+            <section id="resultsx2AddedOne"></section>
+            <section id="resultsx2AddedTwo"> </section>
+            <section id="resultsx2AddedThree"></section>
+            <section id="resultsx2AddedFour"> </section>
+            
+            <section id="resultsAddedOne"></section>
+            <section id="resultsAddedTwo"> </section>
+            <section id="resultsAddedThree"> </section>
+            <section id="resultsAddedFour"></section>
+          </article>
+
+
+                <script src="main.js" async defer></script>
+    </body>
+</html>
