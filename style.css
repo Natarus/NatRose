@@ -84,13 +84,13 @@ input[type="text"] {
 	margin: 20px;
 }
 
-article {
-    width: 450px;   
+
+article {  
     margin: auto;
     justify-content: center;
     display: inline-grid;
     grid-template-rows: 100px 100px 100px 100px;
-    grid-template-columns: 200px 200px;
+    grid-template-columns: 125px 125px;
     grid-gap: 3px;
     border: 2px solid black;
 	font-weight: 300;
@@ -104,4 +104,9 @@ article {
 
 #cuadro{
     margin: 0px 20px 20px 20px;
+}
+
+#cuadro-titulo{
+    width: 260px;
+    margin: auto;
 }
