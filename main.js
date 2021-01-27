@@ -93,6 +93,18 @@ function addOne(a){
    return retorno;
   }
 
+  function arrayDisplayTwo(a){
+    let retorno = "";
+    for(let i=0; i < a.length; i++){
+      if(i==9|i==19|i==29){
+        retorno += a[i]+"<br>"+"<br>"+"<br>";
+      }else{
+        retorno += a[i]+" ";
+      }
+     }
+   return retorno;
+  }
+
   function arrayDisplaySumados(a){
     let retorno = "";
     for(let i=0; i < a.length; i++){
@@ -187,6 +199,70 @@ function addOne(a){
     return retorno;
   }
 
+  function numberReplace(a){
+    let retorno = [];
+    for(let i=0; i<a.length; i++){
+      let temp = "";
+        for (let f=0; f<a[i].length; f++){
+          switch (a[i][f]) {
+            case "0":
+              temp += "5";
+              break;
+            case "1":
+              temp += "6";
+              break;
+            case "2":
+              temp += "7";
+              break;
+            case "3":
+              temp += "8";
+              break;
+            case "4":
+              temp += "9";
+              break;
+            case "5":
+              temp += "0";
+              break;
+            case "6":
+              temp += "1";
+              break;
+            case "7":
+              temp += "2";
+              break;
+            case "8":
+              temp += "3";
+              break;
+            case "9":
+              temp += "4";
+              break;
+            default:
+              console.log("error");
+              break;
+          }
+          
+        }
+      retorno.push(temp);
+    }
+    
+    
+    return retorno
+  }
+
+  function mixReplaced(a,b){
+    let retorno = [];
+    let tempOne = "";
+    let tempTwo = "";
+    for(let i=0; i<a.length; i++){
+      tempOne += a[i][1] + b[i][0];
+      tempTwo += b[i][1] + a[i][0];
+      retorno.push(tempOne);
+      retorno.push(tempTwo);
+      tempOne = ""
+      tempTwo =""
+    }
+    
+    return retorno;
+  }
 
 
 function btnCalcular(){    
@@ -292,9 +368,9 @@ function btnCalcular(){
     resultsx2AddedTwo.innerHTML = displaySquare(multiByResult(retornoX2.slice(5,10),vSumadosXTwo.slice(1,2)));
     resultsx2AddedThree.innerHTML = displaySquare(multiByResult(retornoX2.slice(10,15),vSumadosXTwo.slice(2,3)));
     resultsx2AddedFour.innerHTML = displaySquare(multiByResult(retornoX2.slice(15,20),vSumadosXTwo.slice(3,4)));
-    
+    //METODO 2
+    resultScrambled.innerHTML = arrayDisplayTwo(mixReplaced(retorno,numberReplace(retorno)));
+
     console.log(displaySquare(multiByResult(retornoX2.slice(0,5),vSumadosXTwo.slice(0,1))));
     console.log(document.getElementById("resultsx2AddedOneSub"));
-    document.getElementById("resultadosPorDos").innerHTML = "Resultados x2"
-    document.getElementById("resultadosNormales").innerHTML = "Resultados sin Multiplicar"
 }
